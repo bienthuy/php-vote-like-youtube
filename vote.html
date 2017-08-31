@@ -1,0 +1,64 @@
+<!--
+Voting system
+* Shared by BienThuy.Com
+*  https://bienthuy.com/download/ma-nguon/tao-he-thong-vote-giong-youtube/
+* Skype: ask.bienthuy@outlook.com
+* Facebook: https://www.facebook.com/bienthuywebsite
+* Twitter: https://www.twitter.com/bienthuywebsite
+* Youtube : https://www.youtube.com/bienthuywebsite
+* Pinterest: https://www.pinterest.com/bienthuywebsite
+* Google plus: https://plus.google.com/+bienthuywebsite
+* @ 2017. All Rights Reserved.
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+	$.each( $('.bt_wrapper'), function(){
+		var unique_id = $(this).attr("id");
+		post_data = {'unique_id':unique_id, 'vote':'fetch'};
+		$.post('/vote-process.php.php', post_data,  function(response) {
+				$('#'+unique_id+' .up_votes').text(response.vote_up); 
+				$('#'+unique_id+' .down_votes').text(response.vote_down);
+			},'json');
+	});
+ 
+	$(".bt_wrapper .bt_btn").click(function (e) {
+		var clicked_button = $(this).children().attr('class');
+		var unique_id 	= $(this).parent().attr("id"); 
+		if(clicked_button==='down_button')
+		{
+			post_data = {'unique_id':unique_id, 'vote':'down'};
+			$.post('/vote-process.php.php', post_data, function(data) {
+				$('#'+unique_id+' .down_votes').text(data);
+				alert("Cam on ban, vote cua ban da duoc tinh!");
+			}).fail(function(err) { 
+			alert(err.statusText); 
+			});
+		}
+		else if(clicked_button==='up_button') //user liked the content
+		{
+			post_data = {'unique_id':unique_id, 'vote':'up'};
+			$.post('/vote-process.php.php', post_data, function(data) {
+				$('#'+unique_id+' .up_votes').text(data);
+				alert("Cam on ban da thich bai viet nay.");
+			}).fail(function(err) { 
+			alert(err.statusText); 
+			});
+		}
+	});
+});
+</script>
+
+
+<!-- BIENTHUY.COM voting system -->
+<div id="xxx" class="bt_wrapper">
+<div class="bt_btn">
+<div class="up_button"></div>
+<span class="up_votes">0</span>
+</div>
+&nbsp;
+<div class="bt_btn">
+<div class="down_button"></div>
+<span class="down_votes">0</span>
+</div>
+</div>
+<!-- BIENTHUY.COM voting system end -->
