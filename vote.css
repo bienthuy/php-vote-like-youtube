@@ -1,8 +1,8 @@
 /*voting style */
 .bt_wrapper {display:inline-block;margin-left: 20px;}
-.bt_wrapper .down_button {background: url(https://www.bienthuy.com/bienthuy-img/bienthuy-vote-thumbs.png) no-repeat;float: left;height: 14px;width: 16px;cursor:pointer;margin-top: 3px;}
-.bt_wrapper .down_button:hover {background: url(https://www.bienthuy.com/bienthuy-img/bienthuy-vote-thumbs.png) no-repeat 0px -16px;}
-.bt_wrapper .up_button {background: url(https://www.bienthuy.com/bienthuy-img/bienthuy-vote-thumbs.png) no-repeat -16px 0px;float: left;height: 14px;width: 16px;cursor:pointer;}
-.btg_wrapper .up_button:hover{background: url(https://www.bienthuy.com/bienthuy-img/bienthuy-vote-thumbs.png) no-repeat -16px -16px;;}
+.bt_wrapper .down_button {background: url(https://bienthuy.com/bienthuy-img/bienthuy-vote-thumbs.png) no-repeat;float: left;height: 14px;width: 16px;cursor:pointer;margin-top: 3px;}
+.bt_wrapper .down_button:hover {background: url(https://bienthuy.com/bienthuy-img/bienthuy-vote-thumbs.png) no-repeat 0px -16px;}
+.bt_wrapper .up_button {background: url(https://bienthuy.com/bienthuy-img/bienthuy-vote-thumbs.png) no-repeat -16px 0px;float: left;height: 14px;width: 16px;cursor:pointer;}
+.btg_wrapper .up_button:hover{background: url(https://bienthuy.com/bienthuy-img/bienthuy-vote-thumbs.png) no-repeat -16px -16px;;}
 .bt_btn{float:left;margin-right:5px;}
 .bt_btn span{font-size: 11px;float: left;margin-left: 3px;}
